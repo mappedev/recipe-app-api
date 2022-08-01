@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: . # Contexto actual
+      args:
+        - DEV=true # Indique un argumento DEV en true
+    ports:
+      - "7000:7000" # Puerto de la image de docker compose
+    volumes:
+      - ./app:/app # La image de docker compose alimenta a la app de django y viceversa
+    command: > # Comando que se ejecutará al hacer run en docker compose
+      sh -c "python manage.py runserver 0.0.0.0:7000"

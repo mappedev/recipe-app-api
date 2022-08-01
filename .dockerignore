@@ -1,0 +1,17 @@
+#Git
+.git
+.gitignore
+
+# Docker
+.docker
+
+# Python
+app/__pycache__/
+app/*/__pycache__/
+app/*/*/__pycache__/
+app/*/*/*/__pycache__/
+.env/
+.venv/
+venv/
+
+# * Docker ignore no admite ** para ignorar todas las entradas de la carpeta, por eso es necesario reocorrer cada carpeta
